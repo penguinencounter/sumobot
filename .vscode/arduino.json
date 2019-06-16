@@ -1,5 +1,6 @@
 {
     "port": "/dev/ttyACM0",
     "board": "pololu-a-star:avr:a-star32U4",
-    "sketch": "sumobot.ino"
+    "sketch": "sumobot.ino",
+    "output": "out/"
 }
