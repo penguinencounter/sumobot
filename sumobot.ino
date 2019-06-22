@@ -47,57 +47,9 @@ void setup()
             break;
         }
     }
-    ledRed(0);
-    ledGreen(0);
-    ledYellow(1);
-    if (!mute) {
-        buzzer.play("c16>c16");
-    }
-    lcd.clear();
-    lcd.write("5");
-    delay(1000);
-    lcd.clear();
-    lcd.write("4");
-    delay(1000);
-    ledGreen(1);
-    ledRed(1);
-    lcd.clear();
-    lcd.write("3");
-    if (!mute) {
-        buzzer.play("f");
-    }
-    delay(1000);
-    ledRed(0);
-    lcd.clear();
-    lcd.write("2");
-    if (!mute) {
-        buzzer.play("f");
-    }
-    delay(1000);
-    ledGreen(0);
-    lcd.clear();
-    lcd.write("1");
-    if (!mute) {
-        buzzer.play("f");
-    }
-    delay(1000);
-    lcd.clear();
-    ledYellow(0);
-    if (!mute) {
-        buzzer.play(">c1");
-    }
 }
 
 void loop()
 {
     /* RUNS OVER AND OVER AGAIN */
-    ledYellow(sensors_on_edge[0]);
-    ledGreen(sensors_on_edge[1]);
-    ledRed(sensors_on_edge[2]);
-    motorCountTimer(200, 200, 300);
-    while (edge()) {
-        
-        motorCountTimer(-200, 200, 50);
-    }
-    delay(500);
 }
