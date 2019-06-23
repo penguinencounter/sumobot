@@ -32,4 +32,13 @@ void setup()
 void loop()
 {
     /* RUNS OVER AND OVER AGAIN */
+    ledYellow(sensors_on_edge[0]);
+    ledGreen(sensors_on_edge[1]);
+    ledRed(sensors_on_edge[2]);
+    motorCountTimer(200, 200, 300);
+    while (edge()) {
+        
+        motorCountTimer(-200, 200, 50);
+    }
+    delay(500);
 }
