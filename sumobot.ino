@@ -27,7 +27,6 @@ void setup()
     btn_a = Zumo32U4ButtonA();
     btn_b = Zumo32U4ButtonB();
     btn_c = Zumo32U4ButtonC();
-    mute = false;
     prox.initThreeSensors();
     lcd.clear();
     linesense.initThreeSensors();
