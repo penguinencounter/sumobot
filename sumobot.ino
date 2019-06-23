@@ -15,7 +15,6 @@ Zumo32U4ButtonC btn_c;
 unsigned int line_sensor_readings[3];
 unsigned int prox_sensor_readings[3];
 bool sensors_on_edge[3];
-bool mute;
 
 void setup() 
 {
@@ -28,25 +27,6 @@ void setup()
     btn_a = Zumo32U4ButtonA();
     btn_b = Zumo32U4ButtonB();
     btn_c = Zumo32U4ButtonC();
-    mute = false;
-    prox.initThreeSensors();
-    lcd.clear();
-    linesense.initThreeSensors();
-    ledGreen(true);
-    motorCountTimer(100, 100, 300);
-    motorCountTimer(-100, -100, 300);
-    lcd.write("Start: A");
-    lcd.gotoXY(0, 1);
-    lcd.write("Muted: C");
-    while (true) {
-        if (btn_a.isPressed()) {
-            break;
-        }
-        else if (btn_c.isPressed()) {
-            mute = true;
-            break;
-        }
-    }
 }
 
 void loop()
