@@ -19,7 +19,7 @@ namespace statemachine
     public:
         EventQueue();
         void pushEvent(Event * event);
-        Event getEventWithName(char * name);
+        Event * getEventWithName(char * name);
         void discard();
         int discardProcessedEvents();
     };
